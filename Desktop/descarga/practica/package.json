@@ -1,19 +1,19 @@
 {
   "name": "practica",
   "version": "1.0.0",
-  "description": "de coursera",
+  "description": "practica de Coursera",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/florcinto/prueba.git"
+    "url": "git+https://github.com/florcinto/practica.git"
   },
   "author": "Flor",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/florcinto/prueba/issues"
+    "url": "https://github.com/florcinto/practica/issues"
   },
-  "homepage": "https://github.com/florcinto/prueba#readme"
+  "homepage": "https://github.com/florcinto/practica#readme"
 }
