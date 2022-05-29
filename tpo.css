@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=IM+Fell+English+SC&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family:"Source Sans Pro", Verdana, sans-serif;
+  color: #404040;
+}
+h1, h2, h3, summary, button {
+  font-family: "IM Fell English SC", Georgia, serif;
+}      
+header h1{
+  font-size:2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+nav a {
+  text-decoration: none;
+  color: #404040;
+}
+.intro, #acerca, #contacto{
+  margin: 2rem 1rem;
+  padding: 1rem 3rem;
+  text-align: center;
+  border: 3px solid #404040;
+  border-radius: 5%/10% ;
+}
+#acerca, form{
+  background-color: #f1f3e7;
+}
+.intro, #contacto{
+  background-color: #f4f0e8;
+}
+.temas{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+}
+.tema{
+  flex: 1 0 5rem;
+  text-align: center;
+  margin: 0.5rem;
+  border: 2px outset #f4f0e8;
+  border-radius: 10%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.tema img{
+  width: 8rem;  
+}
+.tema:hover{
+  box-shadow: 5px 5px 15px  #f4f0e8;
+  filter:blur(1px);
+}
+.contacto-redes i{
+  color: #404040;
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+}
+p {
+  margin: .5rem 0 1rem;
+}
+footer {
+  display: flex;
+  padding: 1rem 0;
+  background-color: #f1f3e7; 
+}
+.footer-copyright {
+  flex: 1 0 50%;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.footer-links {
+  flex: 1 0 50%;
+  text-align: right;
+}
+.footer-links a, .breadcrumb a {
+  text-decoration: none;
+  color: #404040;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  background: #f1f3e7;
+}
+.breadcrumb li {
+  padding: 0.5rem;
+}
+.breadcrumb li:after {
+  content: "/";
+  margin-left: 20px;
+}
+.breadcrumb li:last-child:after {
+  content: "";
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/*Glosario*/
+.glosario, aside {    
+  padding: 1rem;
+}
+.glosario h2, .introform h1{
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem; 
+}
+details { 
+  background-color:#f4f0e8;
+  margin-bottom: 1rem;   
+  border-radius: 5%/10%;  
+  border: 2px solid #404040;
+}
+details summary {  
+  font-size: 1.25rem;
+  padding: 1rem;
+  list-style: none;
+  cursor: pointer;
+  text-align:center;
+}
+details p {
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+  background: #f4f0e8;
+  border-radius: 5%/10%;  
+}
+details:hover,details[open] {
+  box-shadow: 5px 5px 15px  #f4f0e8;
+}
+details[open] {
+  background: #ffffff;
+  width: 100%;
+}
+details[open] summary {
+  font-weight: bold;
+}
+aside{
+  display: none;
+  }
+
+/*Formulario*/
+.introform {
+  padding: 1rem ;
+  margin-bottom: -2rem;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 2rem;
+  padding: 1rem 3rem;
+  border:  3px solid #404040;
+  border-radius: 5%/10%
+}
+fieldset{
+  flex: 1 0 100%;
+  border: none;
+}
+.datos{
+  text-align: center;
+}
+.datos label {
+  font-weight: bold;
+  display: block;
+}
+.frecuencia, .contenido{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.frecuencia label,.contenido label{
+  display: block;
+}
+.frecuencia p,.contenido p{
+  text-align: center;
+  font-weight: bold;
+}
+.confirmacion{
+  text-align: center;
+  padding-left: 0;
+  margin: 1rem;
+}
+input:focus{
+  background-color: #f4f0e8;
+}
+input:not(input.confirmacion){
+  display: inline-block;
+  padding: 1rem;
+  margin: 0.5rem; 
+}
+#campos-asterisco{
+  font-size: 0.8rem; 
+}
+button{
+  padding:1rem;
+  margin: 1rem; 
+  border-radius: 20%;
+  background-color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold; 
+  cursor: pointer;
+}
+button:hover{
+  box-shadow: 5px 5px 15px #404040;
+  background-color: #f4f0e8;
+}
+
+@media (min-width: 576px) {
+header{
+  display:flex;
+  background: url(imagenes/header.png) left  no-repeat;
+  background-size: 150px;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+header h1{
+  font-size:3rem;
+  align-self: flex-end;  
+} 
+nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+nav a {
+  text-decoration: none;
+  color: #404040;
+  font-size: 1rem;
+  margin-left: 2rem;
+  transition: all 0.5s;
+  display: block;
+  min-width: max-content;
+}
+nav a:hover {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*Glosario*/
+aside{
+  display:block;   
+}
+aside figcaption{
+  font-size: smaller;
+}
+aside a{
+  text-decoration: none;
+  color: #404040;
+}
+#tabla-periodica{
+  width: 90%;
+  height:450px;
+}
+
+/*Formulario*/
+fieldset{
+  flex: 1 0 50%;
+}
+fieldset.confirmacion{
+  flex-basis: 100%;
+}
+}
+
+@media (min-width: 992px) {
+header{
+  background-size: 200px;
+}
+header h1{
+  font-size:4rem;
+  align-self: center;  
+}
+/*Glosario*/
+#glosario{
+  display:flex;
+  justify-content: center;
+}
+aside{
+  flex-shrink: 0;
+  background-color: #f1f3e7;
+}
+.glosario{
+  flex-grow: 1;
+}
+#tabla-periodica{
+  width: 350px;
+  height:500px;
+}
+
+/*Formulario*/
+form {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 10rem;
+  padding: 1rem 3rem;
+  border:  3px ridge #404040;
+  border-radius: 5%/10%
+}
+fieldset{
+  flex: 1;
+  border: none;
+}
+fieldset.confirmacion{
+  flex: 2 0 100%;
+}
+.datos{
+  text-align: left;
+} 
+.datos label{
+  margin-left: 0.5rem;
+}
+.botones{
+  text-align: center;
+}
+}

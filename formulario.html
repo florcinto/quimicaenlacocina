@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="tpo.css" />
+  <link rel="icon" type="image/png" href="favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicomatic/favicon-16x16.png" sizes="16x16" />
+  <title>Química en la cocina</title>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("formulario").addEventListener('submit', validarFormulario)});
+function validarFormulario(evento) {
+  evento.preventDefault();
+  var nombre = document.getElementById('nombre').value;
+  if(nombre == "") {
+    alert('Por favor, ingresá tu nombre');
+    return;
+  }
+  var apellido = document.getElementById('apellido').value;
+  if(apellido == "") {
+    alert('Por favor, ingresá tu apellido');
+    return;
+  }
+  var email = document.getElementById('email').value;
+  if(email== "") {
+    alert('Por favor, ingresá tu dirección de correo electrónico');
+    return;
+  }
+  var formato = /^\S+@\S+\.\S+$/;
+        if(formato.test(email) === false){
+    alert('Por favor, ingresá una dirección de correo electrónico válida');
+    return;
+  }
+  var confirmar = document.getElementById('newsletter');
+  if(!confirmar.checked) {
+    alert('Por favor, confirmá tu suscripción al newsletter');
+    return;
+  }
+  alert("¡Suscripción exitosa!");
+  this.submit();
+}
+    </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="glosario.html">Glosario de Química</a></li>
+      </ul>
+    </nav>
+    <h1>Química en la cocina</h1>
+  </header>
+  <main>
+    <section>
+      <ol class="breadcrumb">
+        <li><a href="index.html">Inicio</a></li>
+        <li>Suscribirse</li>
+      </ol>
+    </section>
+    <section>
+      <div class="introform">
+        <h1>Suscribite a nuestro newsletter</h1>
+        <p>Si querés recibir notificaciones de actualizaciones y contenido exclusivo, suscribite a nuestro
+          newsletter completando el siguiente formulario.</p>
+      </div>
+      <form id="formulario" name="formulario" method="post" autocomplete="off" novalidate onsubmit="return validarFormulario()" >
+        <fieldset>
+          <p id="campos-asterisco">* Campos obligatorios</p>
+          <div class="datos">
+            <div>
+            <label for="nombre">Nombre: <span>*</span></label>
+            <input id="nombre" type="text" name="nombre" placeholder="Nombre" autofocus required />
+          </div>
+          <div >
+            <label for="apellido">Apellido: <span>*</span></label>
+            <input id="apellido" type="text" name="apellido" placeholder="Apellido" required />
+          </div>
+          <div >
+            <label for="email">Correo electrónico:<span>*</span></label>
+            <input id="email" type="email" name="email" placeholder="Correo electrónico"  required />
+          </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="contenido">
+            <p>¿Qué tipo de contenido te gustaría recibir?</p>
+            <label class="checkbox" ><input type="checkbox" name="contenido1" value="1" >Alertas de nuevos posteos</label>
+            <label class="checkbox" ><input type="checkbox" name="contenido2" value="2">Contenido extra </label>
+            <label class="checkbox" ><input type="checkbox" name="contenido3" value="3">Ejercicios de Química</label>
+          </div>
+          <div class="frecuencia">
+            <p>¿Con qué frecuencia te gustaría recibir nuestro newsletter?</p>
+          <label> <input type="radio" name="frecuencia" value="1">Diaria</label>  
+          <label><input type="radio" name="frecuencia" value="2">Semanal</label>           
+          <label><input type="radio" name="frecuencia" value="3">Mensual</label>
+          </div>
+        </fieldset>
+        <fieldset class="confirmacion">
+        <div class="confirmacion">
+            <input id="newsletter" type="checkbox" name="newsletter" value="sí" checked required />
+            <label for="newsletter">*Sí, confirmo que quiero suscribirme al newsletter</label>
+          </div>
+        <div class="botones">
+          <button id="submit" type="submit">Suscribirme</button>
+          <button type="reset">Cancelar</button>
+        </div>
+      </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-copyright">
+      &copy; 2022 <i>Química en la cocina</i>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+    </div>
+  </footer>
+</body>
+</html>
